@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/transcript_app/static/transcript_app/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/transcript_app/static/transcript_app/css/dashboard.css" rel="stylesheet">
+    <link href="/transcript_app/static/transcript_app/css/transcript.css" rel="stylesheet">
+</head>
+
+    <body>
+    <div>
+        <div >
+    <section class="border border-3 border-dark m-3  p-4 pb-5 mb-5">
+            <div class="row">
+                <div class="col-md-3"><img src="/transcript_app/static/transcript_app/images/logo.png" alt="" width="150" height="150"></div>
+                <div class="col-md-6">
+                <p class="fs-3 text-center"> <b>DAR ES SALAAM INSTITUTE OF TECHNOLOGY</b> </p>
+                <p class="fs-3 text-center"> <b>ACADEMIC TRANSCRIPT</b></p>
+                </div>
+                <div class="col-md-3"><img src="/transcript_app/static/transcript_app/images/" class="rounded float-end" alt="" width="150" height="150"></div>
+            </div>
+            <div class="row mb-5" id="zero_row"></div>
+                <div class="position-relative ms-5 me-0 ps-5 pe-0">
+                    <div class="row mb-5" >
+                    <div class="col-md-3"id="surname"> <b>SURNAME</b> <p><!--fetch data from database when user login for surname-->{{ user_profile.surname }}</p> </div>
+                    <div class="col-md-3" id="Fullname"> <b>GIVEN NAMES</b> <p><!--fetch data from database when user login given names-->{{ user_profile.given_names }}</p></div>
+                    <div class="col-md-2" id="bithDate"> <b>BIRTHDATES</b> <p><!--fetch data from database when user login for birthdates-->{{ user_profile.birthdates }}</p></div>
+                    <div class="col-md-1"id="gender"> <b>GENDER</b> <p><!--fetch data from database when user login for gender--></p>{{ user_profile.gender }}</div>
+                <div class="col-md-3"id="regNo"> <b>REGISTRATION NUMBER</b> <p><!--fetch data from database when user login for registratioon number-->{{ user_profile.registration_number }}</p></div>
+                </div>
+                <div class="row mb-5" id="second_row">
+                    <div class="col-md-3"> <b>DATE OF ADMISSION:</b></div>
+                    <div class="col-md-3"> <!--fetch data from database when user login for date of admission-->{{ user_profile.date_of_admission }}</div>
+                    <div class="col-md-3"> <b>DATE OF GRADUATION:</b></div>
+                    <div class="col-md-3"> <!--fetch data from database when user login for date olf graduation-->{{ user_profile.date_of_graduation }}</div>
+                </div>
+                <div class="row mb-5" id="third_row">
+                    <div class="col-md-3"> <b>AWARD TITLE:</b></div>
+                    <div class="col-md-9"><!--fetch data from database when user login for Award title-->{{ user_profile.award_title }}</div>
+                </div>
+                <div class="row mb-5" id="fourth_row">
+                    <div class="col-md-3"> <b>CLASSIFICATION OF AWARDS:</b></div>
+                    <div class="col-md-9"><!--fetch data from database when user login for classification awards-->{{ user_profile.classification_of_awards }}</div>
+                </div>
+                <div class="row mb-5" id="fifth_row">
+                    <div class="col-md-3"> <b>OVERALL GPA:</b></div>
+                    <div class="col-md-9"><!--fetch data from database when user login for overall gpa-->{{ user_profile.overall_gpa }}</div>
+                </div>
+                <p id="bottom"> <b> <i>NOTE: The award and Classification is based on NTA Level 8 only.</i> </b></p>
+                <div class="row mb-5" id="fifth_row"></div>
+                <div class="row mb-2" id="fifth_row"></div>
+
+                <p class="position-absolute bottom-0 end-0"> CC{{ user_profile.id }} </p>
+
+            </div>
+
+        </section>
+        </div>
+
+        <section class="border border-3 border-dark m-3  p-4 pb-5 mb-5">
+            <div class="container">
+            <div class="row">
+                <!-- NTA LEVEL 7, SEMESTER 1 -->
+                <div class="col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><h6>NTA LEVEL 6</h6></li>
+                        <li class="list-inline-item"><h6>SEMESTER 1</h6></li>
+                    </ul>
+                    <table class="styled-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">CODE</th>
+                            <th scope="col">MODULE NAME</th>
+                            <th scope="col">GRADE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>COU 07501</b></td>
+                            <td><b>MATRICES AND NUMERICAL METHODS</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07502</b></td>
+                            <td><b>CYBERSECURITY</b></td>
+                            <td><b>A</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07503</b></td>
+                            <td><b>DATABASE PROGRAMMING</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07504</b></td>
+                            <td><b>SENSORS</b></td>
+                            <td><b>B</b></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <!-- NTA LEVEL 7, SEMESTER 2 -->
+                <div class="col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><h6>NTA LEVEL 6</h6></li>
+                        <li class="list-inline-item"><h6>SEMESTER 2</h6></li>
+                    </ul>
+                    <table class="styled-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">CODE</th>
+                            <th scope="col">MODULE NAME</th>
+                            <th scope="col">GRADE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>COU 07501</b></td>
+                            <td><b>MATRICES AND NUMERICAL METHODS</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07502</b></td>
+                            <td><b>CYBERSECURITY</b></td>
+                            <td><b>A</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07503</b></td>
+                            <td><b>DATABASE PROGRAMMING</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07504</b></td>
+                            <td><b>SENSORS</b></td>
+                            <td><b>B</b></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- NTA LEVEL 7, SEMESTER 3 -->
+                <div class="col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><h6>NTA LEVEL 7</h6></li>
+                        <li class="list-inline-item"><h6>SEMESTER 3</h6></li>
+                    </ul>
+                    <table class="styled-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">CODE</th>
+                            <th scope="col">MODULE NAME</th>
+                            <th scope="col">GRADE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>COU 07501</b></td>
+                            <td><b>MATRICES AND NUMERICAL METHODS</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07502</b></td>
+                            <td><b>CYBERSECURITY</b></td>
+                            <td><b>A</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07503</b></td>
+                            <td><b>DATABASE PROGRAMMING</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07504</b></td>
+                            <td><b>SENSORS</b></td>
+                            <td><b>B</b></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <!-- NTA LEVEL 7, SEMESTER 4 -->
+                <div class="col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><h6>NTA LEVEL 7</h6></li>
+                        <li class="list-inline-item"><h6>SEMESTER 4</h6></li>
+                    </ul>
+                    <table class="styled-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">CODE</th>
+                            <th scope="col">MODULE NAME</th>
+                            <th scope="col">GRADE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>COU 07501</b></td>
+                            <td><b>MATRICES AND NUMERICAL METHODS</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07502</b></td>
+                            <td><b>CYBERSECURITY</b></td>
+                            <td><b>A</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07503</b></td>
+                            <td><b>DATABASE PROGRAMMING</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07504</b></td>
+                            <td><b>SENSORS</b></td>
+                            <td><b>B</b></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- NTA LEVEL 7, SEMESTER 5 -->
+                <div class="col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><h6>NTA LEVEL 8</h6></li>
+                        <li class="list-inline-item"><h6>SEMESTER 5</h6></li>
+                    </ul>
+                    <table class="styled-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">CODE</th>
+                            <th scope="col">MODULE NAME</th>
+                            <th scope="col">GRADE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>{{ grade.code }}</b></td>
+                            <td><b>{{ grade.module_name }}</b></td>
+                            <td><b>{{ grade.grade }}</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>{{ grade.code }}</b></td>
+                            <td><b>{{ grade.module_name }}</b></td>
+                            <td><b>{{ grade.grade }}</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>{{ grade.code }}</b></td>
+                            <td><b>{{ grade.module_name }}</b></td>
+                            <td><b>{{ grade.grade }}</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>{{ grade.code }}</b></td>
+                            <td><b>{{ grade.module_name }}</b></td>
+                            <td><b>{{ grade.grade }}</b></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <!-- NTA LEVEL 7, SEMESTER 6 -->
+                <div class="col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><h6>NTA LEVEL 8</h6></li>
+                        <li class="list-inline-item"><h6>SEMESTER 6</h6></li>
+                    </ul>
+                    <table class="styled-table">
+                        <!-- Your Semester 6 table content -->
+                    <thead>
+                        <tr>
+                            <th scope="col">CODE</th>
+                            <th scope="col">MODULE NAME</th>
+                            <th scope="col">GRADE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>COU 07501</b></td>
+                        <td><b>MATRICES AND NUMERICAL METHODS</b></td>
+                        <td><b>B+</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>COU 07502</b></td>
+                        <td><b>CYBERSECURITY</b></td>
+                        <td><b>A</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>COU 07503</b></td>
+                        <td><b>DATABASE PROGRAMMING</b></td>
+                        <td><b>B+</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>COU 07504</b></td>
+                        <td><b>SENSORS</b></td>
+                        <td><b>B</b></td>
+                    </tr>
+                </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- NTA LEVEL 7, SEMESTER 5 -->
+                <div class="col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><h6>NTA LEVEL 8</h6></li>
+                        <li class="list-inline-item"><h6>SEMESTER 5</h6></li>
+                    </ul>
+                    <table class="styled-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">CODE</th>
+                            <th scope="col">MODULE NAME</th>
+                            <th scope="col">GRADE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>COU 07501</b></td>
+                            <td><b>MATRICES AND NUMERICAL METHODS</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07502</b></td>
+                            <td><b>CYBERSECURITY</b></td>
+                            <td><b>A</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07503</b></td>
+                            <td><b>DATABASE PROGRAMMING</b></td>
+                            <td><b>B+</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>COU 07504</b></td>
+                            <td><b>SENSORS</b></td>
+                            <td><b>B</b></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <!-- NTA LEVEL 9, SEMESTER 7 -->
+                <div class="col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><h6>NTA LEVEL 9</h6></li>
+                        <li class="list-inline-item"><h6>SEMESTER 7</h6></li>
+                    </ul>
+                    <table class="styled-table">
+                        <!-- Your Semester 6 table content -->
+                    <thead>
+                        <tr>
+                            <th scope="col">CODE</th>
+                            <th scope="col">MODULE NAME</th>
+                            <th scope="col">GRADE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>COU 07501</b></td>
+                        <td><b>MATRICES AND NUMERICAL METHODS</b></td>
+                        <td><b>B+</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>COU 07502</b></td>
+                        <td><b>CYBERSECURITY</b></td>
+                        <td><b>A</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>COU 07503</b></td>
+                        <td><b>DATABASE PROGRAMMING</b></td>
+                        <td><b>B+</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>COU 07504</b></td>
+                        <td><b>SENSORS</b></td>
+                        <td><b>B</b></td>
+                    </tr>
+                </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+        <div class="row">
+            <div class="col-12"><p>NOTE: The Award title and classification is based on NTA Level only.<p></div>
+        </div>
+
+        <a href> <button class="btn btn-primary">Eport to PDF</button> </a>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
